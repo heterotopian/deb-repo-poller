@@ -20,7 +20,7 @@ public class HttpConnectionCheckerTest {
             new HttpConnectionChecker().checkConnection("https://build.go.cd/go/api/support", new Credentials(null, null));
             fail("should fail");
         } catch (Exception e) {
-            assertThat(e.getMessage(), containsString("HTTP/1.1 401"));
+            assertThat(e.getMessage(), containsString("HTTP/1.1 301"));
         }
     }
 }
